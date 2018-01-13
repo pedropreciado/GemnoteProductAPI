@@ -5,9 +5,3 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-black_jacket = Product.new({
-  title: "Patagonia Hybrid Jacket",
-  option: "Black",
-
-})
