@@ -6,6 +6,7 @@
 #  product_id :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  option_id  :integer
 #
 
 require 'test_helper'

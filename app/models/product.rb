@@ -33,4 +33,13 @@ class Product < ApplicationRecord
     primary_key: :id,
     foreign_key: :product_id,
     class_name: "Image"
+
+  has_many :other_options,
+    primary_key: :id,
+    foreign_key: :option_id,
+    class_name: "Option"
+
+  has_many :choices,
+    through: :options,
+    source: :option
 end
