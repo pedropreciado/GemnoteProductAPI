@@ -14,6 +14,6 @@ class Information < ApplicationRecord
 
   belongs_to :product,
     primary_key: :id,
-    foreign_key: :product_id
+    foreign_key: :product_id,
     class_name: "Product"
 end
