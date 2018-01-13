@@ -6,5 +6,7 @@ class CreateInformation < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+
+    add_index :information, :product_id
   end
 end

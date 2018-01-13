@@ -5,5 +5,7 @@ class CreateOptions < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+
+    add_index :options, :product_id
   end
 end

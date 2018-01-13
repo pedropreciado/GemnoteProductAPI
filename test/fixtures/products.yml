@@ -2,12 +2,10 @@
 
 one:
   title: MyString
-  pricing: 
-  pricing: 
   category_id: 1
+  pricing: 9.99
 
 two:
   title: MyString
-  pricing: 
-  pricing: 
   category_id: 1
+  pricing: 9.99
