@@ -6,5 +6,7 @@ class CreateSubcategories < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+    add_index :subcategories, :parent_category_id
+    add_index :subcategories, :child_category_id
   end
 end

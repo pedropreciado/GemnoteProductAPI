@@ -15,4 +15,22 @@ class Category < ApplicationRecord
     primary_key: :id,
     foreign_key: :category_id,
     class_name: "Product"
+
+  has_many :subcategories,
+    primary_key: :id,
+    foreign_key: :parent_category_id,
+    class_name: "Subcategory"
+
+  has_one :supercategory,
+    primary_key: :id,
+    foreign_key: :child_category_id,
+    class_name: "Subcategory"
+
+  has_many :child_categories,
+    through: :subcategories,
+    source: :child_category
+
+  has_one :parent_category,
+    through: :supercategory,
+    source: :parent_category
 end
