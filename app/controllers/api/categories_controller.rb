@@ -33,6 +33,6 @@ class Api::CategoriesController < ApplicationController
   end
 
   def category_params
-    params.require(:category).permit(:title)
+    params.require(:category).permit(:title, :parent_category, :child_category)
   end
 end
