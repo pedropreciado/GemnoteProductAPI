@@ -8,7 +8,7 @@ class Api::CategoriesController < ApplicationController
 
   def create
     @category = Category.new(category_params)
-    if @category.save
+    if @category.save!
       render :index
     else
       render json: @category.errors.full_messages
