@@ -7,5 +7,5 @@ end
 
 if category.parent_category
   parent = category.parent_category
-  json.extract! parent, :id, :title
+  json.parent_id parent.id
 end
