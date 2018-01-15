@@ -5,6 +5,11 @@ class Api::ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
+    if @product.save!
+      render :index
+    else
+      render json: @product.errors.full_messages
+    end
   end
 
   def product_params

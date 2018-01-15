@@ -11,7 +11,7 @@
 #
 
 class Image < ApplicationRecord
-  validates :title, :url, :product_id, presence: true
+  validates :url, :product_id, presence: true
 
   belongs_to :product,
     primary_key: :id,
