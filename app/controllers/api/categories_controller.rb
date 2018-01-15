@@ -9,7 +9,7 @@ class Api::CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     if @category.save!
-      render :index
+      render :show
     else
       render json: @category.errors.full_messages
     end
@@ -33,6 +33,6 @@ class Api::CategoriesController < ApplicationController
   end
 
   def category_params
-    params.require(:category).permit(:title, :parent_category, :child_category)
+    params.permit(:title, :parent_category, :child_category)
   end
 end
