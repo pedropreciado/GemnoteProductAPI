@@ -3,7 +3,7 @@ class Api::InformationController < ApplicationController
     @information = Information.new(info_params)
     if @information.save!
       @product = Product.find_by(params[:product_id])
-      render "api/products/show" product: @product
+      render "api/products/show", product: @product
     else
       render json: @information.errors.full_messages
     end
