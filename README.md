@@ -1,6 +1,6 @@
 # GemnoteProductAPI
 
-GemnoteProductAPI is a API that returns product information, images, pricing, and other options (if available). Built with Rails 5.1.4 and PostgreSQL. 
+GemnoteProductAPI is a API that returns product information, images, pricing, and other options (if available). Built with Rails 5.1.4 and PostgreSQL.
 
 ## Setup
 
@@ -70,9 +70,22 @@ HTTP requests were tested using Postman.
 |---|---|---|
 |`title`|true|Name of the new product|
 
+### Subcategories
+
+`CreateSubcategory`
+
++ method: `POST`
+
++ url: `localhost:3000/api/categories`
+
+|parameters|mandatory|description|
+|---|---|---|
+|`parent_category_id`|true|id of parent category|
+|`child_category_id`|true|id of child category|
+
+
 ## Features to be Added
 
-+ Create subcategories through HTTP request
 + Set images for product through HTTP request
 + Set information for product through HTTP request
 + Set options for product through HTTP request
