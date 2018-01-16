@@ -1,6 +1,6 @@
 # GemnoteProductAPI
 
-GemnoteProductAPI is a API that returns product information, images, pricing, and other options (if available). Built with Rails 5.1.4 and PostgreSQL. HTTP requests were tested using Postman.
+GemnoteProductAPI is a API that returns product information, images, pricing, and other options (if available). Built with Rails 5.1.4 and PostgreSQL. 
 
 ## Setup
 
@@ -9,11 +9,14 @@ Clone this repo locally and `cd` to the projects root directory.
 On the command line:
 
 + Run `brew install postgresql`
++ Start the PostgreSQL server app
 + Run `bundle install`
 + Run `bundle exec rails db:setup`
 + Run `bundle exec rails server`
 
 ## API
+
+HTTP requests were tested using Postman.
 
 ### Products
 
