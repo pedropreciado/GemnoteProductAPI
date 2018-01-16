@@ -1,12 +1,16 @@
 class Api::OptionsController < ApplicationController
 
   def create
-    @option = Option.new(option_params)
-    if @option.save!
+    @option1 = Option.new(option_params)
+    @option2 = Option.new({
+      product_id: params[:option_id],
+      option_id: params[:product_id]
+      })
+    if @option1.save! && @option2.save!
       @product = Product.find_by(id: params[:product_id])
       render json: "api/products/show", product: @product
     else
-      render json: @option.errors.full_messages
+      render json: @option1.errors.full_messages
     end
   end
 
