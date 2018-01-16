@@ -4,7 +4,7 @@ GemnoteProductAPI is a API that returns product information, images, pricing, an
 
 ## Setup
 
-Clone this repo locally and change your directory to the projects root directory.
+Clone this repo locally and `cd` to the projects root directory.
 
 On the command line:
 
