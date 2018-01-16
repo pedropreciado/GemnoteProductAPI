@@ -1,4 +1,4 @@
-json.extract! category, :id, :title
+json.extract! category, :title
 
 unless category.child_categories.empty?
   sub_ids = category.child_categories.map {|child| child.id}
