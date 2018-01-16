@@ -106,8 +106,23 @@ A product can have multiple lines of information. The information is stored as a
 |`body`|true|Single line sentence of information|
 |`product_id`|true|id of product to add information to|
 
+### Images
+
+A product can have many images. The images are stored as a list of external URLs.
+
+`AddImage`
+
++ method: `POST`
+
++ url: `localhost:3000/api/images`
+
+|parameters|mandatory|description|
+|---|---|---|
+|`title`|true|Description of image|
+|`url`|true|External url of image|
+|`product_id`|true|id of product to add image to|
+
 
 ## Features to be Added
 
-+ Set images for product through HTTP request
 + Set options for product through HTTP request
