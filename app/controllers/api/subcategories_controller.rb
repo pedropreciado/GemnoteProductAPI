@@ -3,8 +3,8 @@ class Api::SubcategoriesController < ApplicationController
   def create
     @subcategory = Subcategory.new(subcategory_params)
     if @subcategory.save
-      @category = Category.find_by(id: params[:parent_category_id])
-      render "api/cateories/show", category: @category
+      @category = Category.find_by(id: params[:child_category_id])
+      render "api/categories/show", category: @category
     else
       render json @subcategory.errors.full_messages
     end
