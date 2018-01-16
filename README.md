@@ -4,7 +4,7 @@ GemnoteProductAPI is a API that returns product information, images, pricing, an
 
 ## Setup
 
-Clone this repo locally and `cd` to the projects root directory. Seeds are in db/seeds.rb
+Clone this repo locally and `cd` to the projects root directory. Seeds are in db/seeds.rb.
 
 On the command line:
 
