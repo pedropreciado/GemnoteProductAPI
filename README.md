@@ -73,6 +73,6 @@ HTTP requests were tested using Postman.
 ## Features to be Added
 
 + Create subcategories through HTTP request
-+ Set product images through HTTP request
++ Set images for product through HTTP request
 + Set information for product through HTTP request
 + Set options for product through HTTP request
