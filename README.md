@@ -61,7 +61,7 @@ Categories can many subcategories. For example, an "Apparel" category can have "
 
 ### Products
 
-Products require a category. If a product has many varieties, these options can be set by the OptionAPI.
+Products require a category. If a product has many options(similar products), these options can be set by the OptionAPI.
 
 `ReceiveAllProducts`
 
@@ -87,8 +87,6 @@ Products require a category. If a product has many varieties, these options can 
 |`category_id`|true|id of category (or subcategory) for product (find in CategoryAPI)|
 |`pricing`|true|Price per unit of product|
 |`option`|false|Option name if one of many similar products|
-
-
 
 
 ### Information

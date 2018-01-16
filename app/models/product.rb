@@ -39,7 +39,7 @@ class Product < ApplicationRecord
     foreign_key: :option_id,
     class_name: "Option"
 
-  has_many :choices,
+  has_many :similar_products,
     through: :options,
     source: :option
 end
