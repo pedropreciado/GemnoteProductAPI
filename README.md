@@ -4,7 +4,7 @@ GemnoteProductAPI is a API that returns product information, images, pricing, an
 
 ## Setup
 
-Clone this repo locally and `cd` to the projects root directory. Seeds are in db/seeds.rb.
+Clone this repo locally and `cd` to the project's root directory. Seeds are in db/seeds.rb.
 
 On the command line:
 
@@ -18,35 +18,9 @@ On the command line:
 
 HTTP requests were tested using Postman.
 
-### Products
-
-`ReceiveAllProducts`
-
-+ method: `"GET"`
-
-+ url: `localhost:3000/api/products`
-
-`ReceiveProduct`
-
-+ method: `GET`
-
-+ url: `localhost:3000/api/products/{PRODUCT_ID}`
-
-`CreateProduct`
-
-+ method: `POST`
-
-+ url: `localhost:3000/api/products`
-
-|parameters|mandatory|description|
-|---|---|---|
-|`title`|true|Name of the new product|
-|`category_id`|true|id of category for product (find in CategoryAPI)|
-|`pricing`|true|Price per unit of product|
-|`option`|false|Option name if one of many similar products|
-
-
 ### Categories
+
+All products are required to be categorized.
 
 `ReceiveAllCategories`
 
@@ -72,6 +46,8 @@ HTTP requests were tested using Postman.
 
 ### Subcategories
 
+Categories can many subcategories. For example, an "Apparel" category can have "Men's" and "Women's" subcategories.
+
 `CreateSubcategory`
 
 + method: `POST`
@@ -83,9 +59,55 @@ HTTP requests were tested using Postman.
 |`parent_category_id`|true|id of parent category|
 |`child_category_id`|true|id of child category|
 
+### Products
+
+Products require a category. If a product has many varieties, these options can be set by the OptionAPI.
+
+`ReceiveAllProducts`
+
++ method: `"GET"`
+
++ url: `localhost:3000/api/products`
+
+`ReceiveProduct`
+
++ method: `GET`
+
++ url: `localhost:3000/api/products/{PRODUCT_ID}`
+
+`CreateProduct`
+
++ method: `POST`
+
++ url: `localhost:3000/api/products`
+
+|parameters|mandatory|description|
+|---|---|---|
+|`title`|true|Name of the new product|
+|`category_id`|true|id of category (or subcategory) for product (find in CategoryAPI)|
+|`pricing`|true|Price per unit of product|
+|`option`|false|Option name if one of many similar products|
+
+
+
+
+### Information
+
+A product can have multiple lines of information. The information is stored as a list of single line sentences.
+
+`AddInformation`
+
++ method: `POST`
+
++ url: `localhost:3000/api/information`
+
+|parameters|mandatory|description|
+|---|---|---|
+|`body`|true|Single line sentence of information|
+|`product_id`|true|id of product to add information to|
+
 
 ## Features to be Added
 
 + Set images for product through HTTP request
-+ Set information for product through HTTP request
 + Set options for product through HTTP request
